@@ -1,6 +1,6 @@
 ﻿using IAM.Domain.Entities;
 
-namespace IAM.Api.Authorization
+namespace IAM.Application.Helpers.JwtHelpers
 {
     public interface IJwtUtils
     {

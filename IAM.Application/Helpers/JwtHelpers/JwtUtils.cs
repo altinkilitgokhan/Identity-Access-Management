@@ -1,12 +1,12 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
-using IAM.Api.Helpers;
+using IAM.Application.Helpers;
 using IAM.Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace IAM.Api.Authorization
+namespace IAM.Application.Helpers.JwtHelpers
 {
     public class JwtUtils : IJwtUtils
     {

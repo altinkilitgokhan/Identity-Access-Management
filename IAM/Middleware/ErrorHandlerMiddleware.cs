@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
-using IAM.Api.Helpers;
+using IAM.Application.Helpers;
 
 namespace IAM.Api.Middleware
 {

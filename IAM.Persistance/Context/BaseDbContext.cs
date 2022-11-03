@@ -18,5 +18,18 @@ namespace IAM.Persistance.Context
         {
             Configuration = configuration;
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(a =>
+            {
+                a.ToTable("Users").HasKey(k => k.Id);
+                a.Property(p => p.Id).HasColumnName("Id");
+                a.Property(p => p.Username).HasColumnName("Username");
+                a.Property(p => p.FirstName).HasColumnName("FirstName");
+                a.Property(p => p.LastName).HasColumnName("LastName");
+                a.Property(p => p.PasswordHash).HasColumnName("PasswordHash");
+            });
+        }
     }
 }

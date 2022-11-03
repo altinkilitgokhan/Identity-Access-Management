@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using IAM.Api.Authorization;
-using IAM.Api.Helpers;
 using IAM.Api.Models;
+using IAM.Application.Helpers;
 using IAM.Application.Interfaces;
 using IAM.Application.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace IAM.Api.Controllers
 {
@@ -21,14 +22,15 @@ namespace IAM.Api.Controllers
         {
             _userService = userService;
             _mapper = mapper;
-            _appSettings = appSettings.value;
+            _appSettings = appSettings.Value;
         }
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult Authenticate(AuthenticateRequestModel model)
         {
-            var response = _userService.Authenticate(model);
+            var requestModel = _mapper.Map<AuthenticateRequestModel, AuthenticateApplicationRequestModel>(model);
+            var response = _userService.Authenticate(requestModel);
             return Ok(response);
         }
 

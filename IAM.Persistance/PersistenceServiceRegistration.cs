@@ -9,7 +9,7 @@ namespace IAM.Persistance
     {
         public static IServiceCollection AddPersistanceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<BaseDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("IamConnectionString")));
+            services.AddDbContext<BaseDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("UserConnection")));
 
             return services;
         }

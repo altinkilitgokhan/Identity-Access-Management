@@ -6,8 +6,8 @@ namespace IAM.Application.Interfaces
     public interface IUserService
     {
         AuthenticateApplicationResponseModel Authenticate(AuthenticateApplicationRequestModel request);
-        IEnumerable<UserModel> GetAll();
-        UserModel GetById(int Id);
+        IEnumerable<User> GetAll();
+        User GetById(int Id);
         void Register(RegisterApplicationRequestModel request);
         void Update(int Id, UpdateApplicationRequestModel request);
         void Delete(int Id);

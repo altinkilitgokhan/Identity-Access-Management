@@ -1,4 +1,5 @@
-﻿using IAM.Application.Interfaces;
+﻿using IAM.Application.Helpers.JwtHelpers;
+using IAM.Application.Interfaces;
 
 namespace IAM.Api.Authorization
 {

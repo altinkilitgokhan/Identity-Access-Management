@@ -1,4 +1,4 @@
-﻿namespace IAM.Api.Helpers
+﻿namespace IAM.Application.Helpers
 {
     public class AppSettings
     {
